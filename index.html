@@ -1,0 +1,409 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>生達化學製藥</title>
+<!--手機meta-->
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<!--外部關聯公用的CSS文件-->
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+.nav a:nth-child(1){background-color: #e8e8e8;color:#53B784;}
+</style>
+
+<!--外聯jquery文件-->
+<script src="js/jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function(){
+	//菜單功能
+	$(".menu-button").click(function(){
+		$(".m-nav").toggle();
+	})
+	//選項功能
+	$(".news-list").hide().eq(0).show();	
+	$(".news-tab li").click(function(){
+		$(".news-list").hide().eq($(this).index()).show();
+		//所有li都變成文本黑色 背景透明
+		$(".news-tab li")
+		.css("color","black")
+		.css("background-color","transparent");
+		//點擊的項目文本白色 背景綠色
+		$(this)
+		.css("color","white")
+		.css("background-color","#3ca0a0");
+	})
+})
+</script>
+
+
+<!-- Link Swiper's CSS 外部連接了swiper的CSS-->
+<link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+<!-- Demo styles -->
+<style>
+html,body {position: relative;}
+body {
+background: #fff;
+font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+font-size: 14px;
+color: #000;
+margin: 0;
+padding: 0;
+}
+
+.swiper {width: 100%;}
+
+.swiper-slide {
+overflow: hidden; /*把溢出的部分隱藏掉*/
+text-align: center;
+font-size: 18px;
+background: #fff;
+
+/* Center slide text vertically */
+display: -webkit-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;/*變成彈性盒子顯示*/
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+-webkit-justify-content: center;
+justify-content: center;/*水平對齊*/
+-webkit-box-align: center;
+-ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;/*垂直對齊*/
+}
+
+/*媒體最大寬度值用％去算實際值，直接用％圖會整體照比例變小，不會只顯示中間*/
+/*窗口為1200px/圖1920px約為0.6，980px/0.6=img width*/
+@media(max-width:980px){
+	.swiper-slide img{width: 1600px;}
+}
+@media(max-width:780px){
+	.swiper-slide img{width: 1300px;}
+}
+@media(max-width:580px){
+	.swiper-slide img{width: 970px;}
+}
+@media(max-width:380px){
+	.swiper-slide img{width: 640px;}
+}
+</style>
+</head>
+
+<body>
+<!--頁頭-->
+<div class="header">
+	<div class="logo"><img src="img/logo.png"></div>
+	<div class="menu-button">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<ul class="m-nav">
+		<li><a href="">官網首頁</a></li>
+		<li><a href="company_overview.html">公司概況</a></li>
+		<li><a href="product_center.html">產品中心</a></li>
+		<li><a href="">營銷體系</a></li>
+		<li><a href="">研發中心</a></li>
+		<li><a href="">加入我們</a></li>
+		<li><a href="">ENGLISH</a></li>
+	</ul>
+	<div class="nav">
+		<a href="">官網首頁</a>
+		<a href="company_overview.html">公司概況</a>
+		<a href="product_center.html">產品中心</a>
+		<a href="">營銷體系</a>
+		<a href="">研發中心</a>
+		<a href="">加入我們</a>
+		<a href="">ENGLISH</a>
+	</div>
+	<div class="clearfix"></div>
+</div>
+<!--廣告-->
+<!-- Swiper 結構位置 作品-->
+<div class="swiper mySwiper">
+	<div class="swiper-wrapper">
+		<div class="swiper-slide"><img src="img/banner1.png"></div>
+		<div class="swiper-slide"><img src="img/banner2.png"></div>
+		<div class="swiper-slide"><img src="img/banner3.png"></div>
+	</div>
+</div>
+
+<!-- Swiper JS 外部連接JS文件-->
+<script src="js/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+  autoplay: {
+	  delay: 2500,
+	  disableOnInteraction: false,
+	},
+	loop: true,
+  });
+</script>
+
+<!--站內搜索功能-->
+<div class="search-box">
+	<input>
+	<!--<input type="button" value="搜索">-->
+	<button>搜索</button>
+	<div class="clearfix"></div>
+</div>
+
+<!--內容區域-->
+<div class="content">
+	<!--左邊盒子-->
+	<div class="content-list">
+		<!--欄目標題-->
+		<div class="list-tittle">
+			<h1>新聞中心</h1>
+			<a href="">MORE</a>
+			<div class="clearfix"></div>
+		</div>
+		<!--欄目內容-->
+		<div class="list-box">
+			<ul class="news-tab">
+				<li>公司動態</li>
+				<li>行業訊息</li>
+				<li>醫藥知識</li>
+				<div class="clearfix"></div>
+			</ul>
+			<ul class="news-list">
+				<li>
+					<a href="">生達製藥義消成軍儀式</a><span>2022/10/20</span>
+					<div class="clearfix"></div>
+				</li>
+				
+				<li>
+					<a href="">第三十七屆「生達盃」</a><span>2022/09/30</span>
+					<div class="clearfix"></div>
+				</li>
+				
+				<li>
+					<a href="">工商時報全版企業報導</a><span>2022/08/22</span>
+					<div class="clearfix"></div>
+				</li>
+				
+				<li>
+					<a href="">生達製藥認養土庫車站</a><span>2022/08/01</span>
+					<div class="clearfix"></div>
+				</li>
+				
+				<li>
+					<a href="">總統召見生技獎得主</a><span>2022/03/01</span>
+					<div class="clearfix"></div>
+				</li>
+				
+				<li>
+					<a href="">榮獲「傑出生技產業金質獎」</a><span>2021/11/17</span>
+					<div class="clearfix"></div>
+				</li>
+			</ul>
+			<ul class="news-list">
+				<li>
+					<a href="">生達醫藥集團</a><span>2022/10/20</span>
+					<div class="clearfix"></div>
+				</li>
+				
+				<li>
+					<a href="">生達製藥</a><span>2022/09/30</span>
+					<div class="clearfix"></div>
+				</li>
+				
+				<li>
+					<a href="">生泰公司</a><span>2022/08/22</span>
+					<div class="clearfix"></div>
+				</li>
+				
+				<li>
+					<a href="">生展公司</a><span>2022/08/01</span>
+					<div class="clearfix"></div>
+				</li>
+				
+				<li>
+					<a href="">端強公司</a><span>2022/03/01</span>
+					<div class="clearfix"></div>
+				</li>
+				
+				<li>
+					<a href="">健康人生及佑全連鎖藥妝店</a><span>2021/11/17</span>
+					<div class="clearfix"></div>
+				</li>
+			</ul>
+			<ul class="news-list">
+				<li>
+					<a href="">淺談上呼吸道感染的藥物治療</a><span>2022/10/20</span>
+					<div class="clearfix"></div>
+				</li>
+				
+				<li>
+					<a href="">腸胃解痙劑用藥</a><span>2022/09/30</span>
+					<div class="clearfix"></div>
+				</li>
+				
+				<li>
+					<a href="">神經性疼痛及治療用藥介紹</a><span>2022/08/22</span>
+					<div class="clearfix"></div>
+				</li>
+				
+				<li>
+					<a href="">慢性B型肝炎及其藥物治療</a><span>2022/08/01</span>
+					<div class="clearfix"></div>
+				</li>
+				
+				<li>
+					<a href="">多元健身飲食</a><span>2022/03/01</span>
+					<div class="clearfix"></div>
+				</li>
+				
+				<li>
+					<a href="">B型肝炎預防與治療的最新趨勢</a><span>2021/11/17</span>
+					<div class="clearfix"></div>
+				</li>
+			</ul>			
+		</div>
+		<!--欄目標題-->
+		<div class="list-tittle">
+			<h1>關於我們</h1>
+			<a href="">MORE</a>
+			<div class="clearfix"></div>
+		</div>
+		<div class="aboutus">
+			<img src="img/about01.png" alt="">
+			<p>生達製藥在台成立53年，保持了每年業績持續成長及每年獲利的紀錄，優良藥廠是我們對產品的保證，精益求精、穩健成長是我們對大眾的承諾。生達公司的創辦人范董事長除了企業經營理念外，更強調企業的經營需要肩負起企業的社會責任 ( Corporate Social Responsibility，簡稱 CSR )，CSR 的四大面向包括：公司治理、企業承諾、社區參與及環境保護等，企業除了要創造利潤外，也要善盡社會責任。</p>
+			<a href="">【點擊查看詳情】</a>
+		</div>
+	</div>
+	<!--右邊盒子-->
+	<div class="content-right">
+	<!--欄目標題-->
+		<div class="list-tittle">
+			<h1>圖片新聞</h1>
+			<a href="">MORE</a>
+			<div class="clearfix"></div>
+		</div>
+		<div class="photo-replay">
+		<!-- Swiper 結構位置 -->
+		<div class="swiper mySwiper pr1">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="img/news_p1.png"></div>
+				<div class="swiper-slide"><img src="img/news_p2.png"></div>
+				<div class="swiper-slide"><img src="img/news_p3.png"></div>
+				<div class="swiper-slide"><img src="img/news_p4.png"></div>
+				<div class="swiper-slide"><img src="img/news_p5.png"></div>
+			</div>
+			<!--Add Arrows-->
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+			<!--Add Pagination 頁碼圓點功能-->
+            <div class="swiper-pagination"></div>
+		</div>
+		<!-- Swiper JS 外部連接JS文件-->
+		<script src="js/swiper-bundle.min.js"></script>
+		<!-- Initialize Swiper -->
+		<script>
+		  var swiper2 = new Swiper(".pr1", {
+		  autoplay: {
+			  delay: 2500,
+			  disableOnInteraction: false,
+			},
+		  loop: true,
+		  navigation: {
+		  nextEl: ".swiper-button-next",
+		  prevEl: ".swiper-button-prev",
+		   },
+		  pagination: {
+          el: ".swiper-pagination",
+           },
+		  });
+		</script>
+		</div>
+		<!--欄目標題-->
+		<div class="list-tittle">
+			<h1>產品展示</h1>
+			<a href="">MORE</a>
+			<div class="clearfix"></div>
+		</div>
+		<div class="product-replay">
+			<!-- Swiper 結構位置 -->
+		<div class="swiper mySwiper pr2">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="img/product01.png"></div>
+				<div class="swiper-slide"><img src="img/product02.png"></div>
+				<div class="swiper-slide"><img src="img/product03.png"></div>
+			</div>
+			<!--Add Arrows-->
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+			<!--Add Pagination 頁碼圓點功能-->
+            <div class="swiper-pagination"></div>
+		</div>
+		<!-- Swiper JS 外部連接JS文件-->
+		<script src="js/swiper-bundle.min.js"></script>
+		<!-- Initialize Swiper -->
+		<script>
+		  var swiper3 = new Swiper(".pr2", {
+		  autoplay: {
+			  delay: 2500,
+			  disableOnInteraction: false,
+			},
+		  loop: true,
+		  slidesPerView: 3,
+          spaceBetween: 30,
+		  navigation: {
+		  nextEl: ".swiper-button-next",
+		  prevEl: ".swiper-button-prev",
+		   },
+		  pagination: {
+          el: ".swiper-pagination",
+           },
+		  });
+		</script>
+		</div>
+		<!--欄目標題-->
+		<div class="list-tittle">
+			<h1>友情鏈接</h1>
+			<a href="">MORE</a>
+			<div class="clearfix"></div>
+		</div>
+		<div class="friend">
+			<select>
+				<option>== 請選擇：集團內部鏈接 ==</option>
+				<option>集團HR部門</option>
+				<option>產品研發部門</option>
+			</select>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<select>
+				<option>== 請選擇：主管部門鏈接 ==</option>
+				<option>集團HR部門</option>
+				<option>品研發部門</option>
+			</select>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</div>
+
+<!--頁腳-->
+<div class="footer">
+	<a href="">關於我們</a>&nbsp;|&nbsp;<a href="">營銷中心</a>&nbsp;|&nbsp;<a href="">研發導向</a>&nbsp;|&nbsp;<a href="">加入我們</a>&nbsp;|&nbsp;<a href="">網站地圖</a>&nbsp;|&nbsp;<br>
+	版權所有：生達化學製藥有限公司 <br> Copyright &copy; Standard Chem & Pharm CO., LTD. All Rights Reserved. <br>
+	DESIGNED BY WCREATIVE 網頁設計
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

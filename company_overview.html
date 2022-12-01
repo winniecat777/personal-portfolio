@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>公司概況</title>
+<!--手機meta-->
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<!--外部關聯公用的CSS文件-->
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+.nav a:nth-child(2){background-color: #e8e8e8;color:#53B784;}
+</style>
+
+<!--外聯jquery文件-->
+<script src="js/jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function(){
+	$(".menu-button").click(function(){
+		$(".m-nav").toggle();
+	})
+})
+</script>
+
+<!-- Link Swiper's CSS 外部連接了swiper的CSS-->
+<link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+<!-- Demo styles -->
+<style>
+html,body {position: relative;}
+
+.swiper {width: 100%;}
+
+.swiper-slide {
+overflow: hidden; /*把溢出的部分隱藏掉*/
+text-align: center;
+font-size: 18px;
+background: #fff;
+
+/* Center slide text vertically */
+display: -webkit-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;/*變成彈性盒子顯示*/
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+-webkit-justify-content: center;
+justify-content: center;/*水平對齊*/
+-webkit-box-align: center;
+-ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;/*垂直對齊*/
+}
+
+/*媒體最大寬度值用％去算實際值，直接用％圖會整體照比例變小，不會只顯示中間*/
+/*窗口為1200px/圖1920px約為0.6，980px/0.6=img width*/
+@media(max-width:980px){
+	.swiper-slide img{width: 1600px;}
+}
+@media(max-width:780px){
+	.swiper-slide img{width: 1300px;}
+}
+@media(max-width:580px){
+	.swiper-slide img{width: 970px;}
+}
+@media(max-width:380px){
+	.swiper-slide img{width: 640px;}
+}
+</style>
+</head>
+
+<body>
+<!--頁頭-->
+<div class="header">
+	<div class="logo"><img src="img/logo.png"></div>
+	<div class="menu-button">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<ul class="m-nav">
+		<li><a href="index.html">官網首頁</a></li>
+		<li><a href="">公司概況</a></li>
+		<li><a href="product_center.html">產品中心</a></li>
+		<li><a href="">營銷體系</a></li>
+		<li><a href="">研發中心</a></li>
+		<li><a href="">加入我們</a></li>
+		<li><a href="">ENGLISH</a></li>
+	</ul>
+	<div class="nav">
+		<a href="index.html">官網首頁</a>
+		<a href="">公司概況</a>
+		<a href="product_center.html">產品中心</a>
+		<a href="">營銷體系</a>
+		<a href="">研發中心</a>
+		<a href="">加入我們</a>
+		<a href="">ENGLISH</a>
+	</div>
+	<div class="clearfix"></div>
+</div>
+
+<!--廣告-->
+<!-- Swiper 結構位置 作品-->
+<div class="swiper mySwiper">
+	<div class="swiper-wrapper">
+		<div class="swiper-slide"><img src="img/banner1.png"></div>
+		<div class="swiper-slide"><img src="img/banner2.png"></div>
+		<div class="swiper-slide"><img src="img/banner3.png"></div>
+	</div>
+</div>
+
+<!-- Swiper JS 外部連接JS文件-->
+<script src="js/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+  autoplay: {
+	  delay: 2500,
+	  disableOnInteraction: false,
+	},
+	loop: true,
+  });
+</script>
+
+<!--最新活動-->
+<div class="newest-activity">
+	<div class="newest-tittle">最新活動：</div>
+	<div class="newest-content">活動的具體文字內容</div>
+	<div class="clearfix"></div>
+</div>
+
+<!--子頁內容-->
+<div class="subpage-content">
+	<div class="content-left">
+		<ul class="overview-nav">
+			<li><h1>公司簡介</h1></li>
+			<li><a href="">關於生達</a></li>
+			<li><a href="">創辦人的話</a></li>
+			<li><a href="">獎項認證</a></li>
+			<li><a href="">經營團隊與展望</a></li>
+			<li><a href="">相關企業</a></li>
+		</ul>
+	</div>
+	<div class="content-right2">
+		<div class="tittle">公司簡介</div>
+		<div class="location">您所在的位置：首頁 &gt; 公司簡介</div>
+		<div class="content_1">
+			<h1>公司簡介</h1>
+			<h2>文章來源：更新時間：瀏覽次數：作者：</h2>
+			<div class="content1-text">
+				<p>生達化學製藥股份有限公司於民國 56 年成立以來，秉持〝誠正精新，造福人群〞之經營理念，以不斷提供更新的技術、更好的產品、更佳的服務、造福全人類為企業使命，以分期逐項達成世界級一流藥廠為企業願景。</p>
+				<p>為善盡企業社會責任，對投資人、政府、消費者、員工、協力廠商、社區鄰里等利害關係人之責任與義務，生達承諾提供必要資源，落實以下政策，期能達到符合顧客滿意、員工樂意、股東願意、政府合意、經營得意之經營境界，使生達公司得以精進發展、永續壯大。</p>
+				<p>生達公司的創辦人范董事長除了企業經營理念外，更強調企業的經營需要肩負起企業的社會責任 ( Corporate Social Responsibility，簡稱 CSR )，CSR 的四大面向包括：公司治理、企業承諾、社區參與及環境保護等，企業除了要創造利潤外，也要善盡社會責任。</p>
+				<p>良好的公司治理架構是企業永續經營的基礎，一直以來生達公司營運透明，注重股東權益，堅信健全有效率的董事會是公司治理的基礎。公司治理架構包括：股東會、董事會、審計委員會、薪資報酬委員會、稽核室。董事會為生達製藥重大經營治理機構，遵循「公司法」定期召開股東會，並依據「上市上櫃公司治理實務守則」，制定公司相關治理制度，包含「經營理念與經營原則」、「董事會議事規範」、「股東會議事規則」、「誠信經營守則」等。經營團隊則包括總經理/副總暨各管理相關單位。</p>
+				<ul>
+					<li>經營精神 - 嚴謹細心、精益求精</li>
+					<li>經營方式 - 穩健踏實、積極創新</li>
+					<li>經營方針 - 精進發展、永續壯大</li>
+					<li>經營理念 - 誠正精新、造福人群</li>
+					<li>經營境界 - 顧客滿意、員工樂意、股東願意、政府合意、經營得意</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</div>
+<!--頁腳-->
+<div class="footer">
+	<a href="">關於我們</a>&nbsp;|&nbsp;<a href="">營銷中心</a>&nbsp;|&nbsp;<a href="">研發導向</a>&nbsp;|&nbsp;<a href="">加入我們</a>&nbsp;|&nbsp;<a href="">網站地圖</a>&nbsp;|&nbsp;<br>
+	版權所有：生達化學製藥有限公司 <br> Copyright &copy; Standard Chem & Pharm CO., LTD. All Rights Reserved. <br>
+	DESIGNED BY WCREATIVE 網頁設計
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
